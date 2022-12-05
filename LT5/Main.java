@@ -32,8 +32,8 @@ abstract class Main extends Compute{
         tFieldTwo.setPreferredSize(new Dimension(80,20));
 
         labelTitle = new JLabel("Change Calculator:", JLabel.CENTER);
-        labelOne = new JLabel(" Total Price: ");
-        labelTwo = new JLabel(" Amount paid: ");
+        labelOne = new JLabel("         Total Price: ");
+        labelTwo = new JLabel("         Amount paid: ");
 
         labelTitle.setForeground(Color.WHITE);
         tFieldOne.setBackground(Color.BLACK);
