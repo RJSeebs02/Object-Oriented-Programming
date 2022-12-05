@@ -15,8 +15,8 @@ abstract class Main extends Compute{
         JButton button = new JButton("Compute!");
 
         panelTitle.setBounds(10, 10, 380, 40);
-        panelOne.setBounds(10, 60, 380, 80);
-        panelTwo.setBounds(10, 200, 380, 40);
+        panelOne.setBounds(10, 60, 360, 80);
+        panelTwo.setBounds(10, 200, 360, 40);
 
         frame.getContentPane().setBackground(Color.GRAY);
         panelTitle.setBackground(Color.GRAY);
@@ -31,9 +31,9 @@ abstract class Main extends Compute{
         tFieldTwo = new JTextField(20);
         tFieldTwo.setPreferredSize(new Dimension(80,20));
 
-        labelTitle = new JLabel("Age Calculator:", JLabel.CENTER);
-        labelOne = new JLabel(" What year is it now?");
-        labelTwo = new JLabel(" What year were you born?");
+        labelTitle = new JLabel("Change Calculator:", JLabel.CENTER);
+        labelOne = new JLabel(" Total Price: ");
+        labelTwo = new JLabel(" Amount paid: ");
 
         labelTitle.setForeground(Color.WHITE);
         tFieldOne.setBackground(Color.BLACK);
@@ -81,17 +81,17 @@ abstract class Main extends Compute{
 
 abstract class Methods {
     public void displayMessage(){
-        System.out.println("Your age");
+        System.out.println("Your change");
     }
 }
 class Compute extends Methods{
     public static int computeAge(String value1, String value2){
         int val1 = Integer.parseInt(value1);
         int val2 = Integer.parseInt(value2);
-        int finalage = val1 - val2;
-        return finalage;
+        int change = val1 - val2;
+        return change;
     }
-    public static void displayMessage(String finalage){
-        JOptionPane.showMessageDialog( null, "Your current age is: " + finalage, "Result" , JOptionPane.INFORMATION_MESSAGE );
+    public static void displayMessage(String change){
+        JOptionPane.showMessageDialog( null, "Your change is: " + change, "Result" , JOptionPane.INFORMATION_MESSAGE );
     }
 }
